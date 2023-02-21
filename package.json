@@ -4,7 +4,9 @@
   "description": "Back-end for blog exercise",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start:dev": "NODE_ENV=development nodemon -r dotenv/config index.js"
   },
   "author": "Shreya Verma",
   "license": "ISC",
@@ -15,7 +17,6 @@
     "hapi-pino": "^11.0.1",
     "pg": "^8.9.0",
     "pg-hstore": "^2.3.4",
-    "pino-pretty": "^9.3.0",
     "sequelize": "^6.28.0"
   },
   "devDependencies": {
