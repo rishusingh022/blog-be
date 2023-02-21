@@ -16,6 +16,9 @@ const updateBlogPostByIdRoute = {
       params: blogPostIdParam,
       payload: updateBlogPostPayload,
     },
+    cors: {
+      origin: ['http://localhost:3000'],
+    },
   },
 };
 
