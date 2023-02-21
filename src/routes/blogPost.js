@@ -1,4 +1,5 @@
-const { getBlogPosts } = require('../handlers/blogPost');
+const { getBlogPosts, updateBlogPostById } = require('../handlers/blogPost');
+const { blogPostIdParam, updateBlogPostPayload } = require('../joiSchema/blogPost');
 
 const getBlogPostsRoute = {
   method: 'GET',
@@ -6,9 +7,23 @@ const getBlogPostsRoute = {
   handler: getBlogPosts,
 };
 
+const updateBlogPostByIdRoute = {
+  method: 'PUT',
+  path: '/blog-posts/{id}',
+  handler: updateBlogPostById,
+  options: {
+    validate: {
+      params: blogPostIdParam,
+      payload: updateBlogPostPayload,
+    },
+  },
+};
+
 module.exports = {
   blogPostRoutes: [
     getBlogPostsRoute,
+    updateBlogPostByIdRoute,
   ],
   getBlogPostsRoute,
+  updateBlogPostByIdRoute,
 };

@@ -5,7 +5,7 @@
 - Clone the repository and navigate to the project directory.
 - Perform `npm install` at command line.
 - Create an empty postgres database.
-- Define the environment variables in a `.env` file like below:
+- Define the environment variables in a `.env` file like below (please refer to .sample.env):
 ```
 POSTGRESQL_DB_NAME=<database name to connect to>
 DB_USER=<username to be used for database>

@@ -29,6 +29,18 @@ module.exports = (sequelize, DataTypes) => {
     claps: DataTypes.INTEGER,
     liked: DataTypes.BOOLEAN,
     image: DataTypes.STRING,
+    createdAt: {
+      field: 'created_at',
+      allowNull: false,
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+    },
+    updatedAt: {
+      field: 'updated_at',
+      allowNull: false,
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+    },
   }, {
     sequelize,
     modelName: 'blogPosts',
