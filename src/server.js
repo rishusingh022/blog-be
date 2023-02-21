@@ -10,7 +10,7 @@ const attachPlugins = async (server) => {
   await server.register({
     plugin: Pino,
     options: {
-      enabled: process.env.NODE_ENV !== 'test'
+      enabled: process.env.NODE_ENV !== 'test',
     },
   });
 };
@@ -18,7 +18,7 @@ const attachPlugins = async (server) => {
 const init = async () => {
   const server = Hapi.server({
     port: 8080,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
   });
   await server.initialize();
   await attachPlugins(server);

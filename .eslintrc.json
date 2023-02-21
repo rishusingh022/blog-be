@@ -1,21 +1,15 @@
 {
     "env": {
-        "node": true,
+        "browser": true,
         "es2021": true
     },
-    "extends": [
-        "airbnb-base"
+    "extends": "airbnb-base",
+    "overrides": [
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "rules": {
-        "comma-dangle": [0, "always-multiline"],
-        "import/no-extraneous-dependencies": [0, { 
-            "devDependencies": true 
-        }],
-        "arrow-body-style": 0,
-        "max-len": [2, { "code": 120, "ignoreStrings": true, "ignoreComments": true }]
     }
 }

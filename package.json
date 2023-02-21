@@ -6,7 +6,12 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start:dev": "NODE_ENV=development nodemon -r dotenv/config index.js"
+    "db:up": "sequelize db:migrate",
+    "db:down": "sequelize db:migrate:undo:all",
+    "seed:up": "sequelize db:seed:all",
+    "seed:down": "sequelize db:seed:undo:all",
+    "start:server": "NODE_ENV=development nodemon -r dotenv/config index.js",
+    "start": "npm run db:up && npm run seed:up && npm run start:server"
   },
   "author": "Shreya Verma",
   "license": "ISC",
@@ -21,6 +26,7 @@
   },
   "devDependencies": {
     "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "nodemon": "^2.0.20",
     "sequelize-cli": "^6.6.0"
