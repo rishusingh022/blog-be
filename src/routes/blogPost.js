@@ -5,6 +5,11 @@ const getBlogPostsRoute = {
   method: 'GET',
   path: '/blog-posts',
   handler: getBlogPosts,
+  options: {
+    cors: {
+      origin: ['http://localhost:3000'],
+    },
+  },
 };
 
 const updateBlogPostByIdRoute = {
