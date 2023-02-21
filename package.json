@@ -1,0 +1,27 @@
+{
+  "name": "blog-be",
+  "version": "1.0.0",
+  "description": "Back-end for blog exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shreya Verma",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@hapi/hapi": "^21.3.0",
+    "dotenv": "^16.0.3",
+    "hapi-pino": "^11.0.1",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "pino-pretty": "^9.3.0",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-plugin-import": "^2.27.5",
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.6.0"
+  }
+}
